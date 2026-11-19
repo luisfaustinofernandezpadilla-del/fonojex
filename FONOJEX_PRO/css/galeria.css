@@ -1,0 +1,45 @@
+/* FonoJex Pro · galeria.css — página de galería con entorno decorado */
+.gal{background:#0a0717;color:#ece8fa;min-height:100vh;display:flex;flex-direction:column;position:relative;overflow-x:clip}
+.gal .hdr{background:rgba(10,7,23,.72);backdrop-filter:blur(10px);border-color:rgba(167,139,250,.18)}
+.gal-back{margin-left:auto;display:inline-flex;align-items:center;gap:.45rem;padding:.55rem 1.05rem;border-radius:999px;border:1.5px solid rgba(167,139,250,.5);color:#d9ccff;font-weight:600;font-size:.9rem;transition:.25s}
+.gal-back .i{transform:rotate(180deg);width:1.05em;height:1.05em}
+.gal-back:hover{background:#a78bfa;color:#1b1142;transform:translateY(-2px)}
+/* fondo decorado */
+.bg{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;background:radial-gradient(120% 80% at 50% 0%,#241056 0%,#0f0a26 55%,#070514 100%)}
+.bg .orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;animation:float 14s ease-in-out infinite}
+.bg .o1{width:46vmax;height:46vmax;left:-14vmax;top:-12vmax;background:#6d28d9}
+.bg .o2{width:38vmax;height:38vmax;right:-12vmax;top:22vh;background:#0ea5e9;opacity:.32;animation-delay:-5s}
+.bg .o3{width:34vmax;height:34vmax;left:25vw;bottom:-18vmax;background:#c026d3;opacity:.35;animation-delay:-9s}
+.bg .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(167,139,250,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(167,139,250,.09) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at 50% 30%,#000 10%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse at 50% 30%,#000 10%,transparent 75%)}
+.bg .beam{position:absolute;top:-20%;width:18vmax;height:140%;background:linear-gradient(180deg,rgba(125,211,252,.22),transparent 70%);filter:blur(18px);transform-origin:top center;animation:sweep 11s ease-in-out infinite}
+.bg .b1{left:12%;transform:rotate(18deg)}.bg .b2{right:10%;transform:rotate(-20deg);background:linear-gradient(180deg,rgba(232,121,249,.2),transparent 70%);animation-delay:-5s}
+@keyframes float{50%{transform:translate(4vmax,3vmax) scale(1.08)}}
+@keyframes sweep{50%{opacity:.4;translate:4vmax 0}}
+.gal-main,.gal-ftr,.gal .hdr{position:relative;z-index:1}
+.gal .hdr{position:sticky;z-index:50}
+.gal-main{flex:1}
+/* título */
+.gal-hero{text-align:center;padding-top:3.2rem;padding-bottom:2rem}
+.gal-hero h1{font-size:clamp(2.1rem,5vw,3.4rem);font-weight:800;color:#fff;letter-spacing:-.02em}
+.gal-hero h1 em{font-style:normal;background:linear-gradient(90deg,#c4b5fd,#7dd3fc,#f0abfc);-webkit-background-clip:text;background-clip:text;color:transparent}
+.gal-hero p{max-width:36rem;margin:.6rem auto 0;color:#b9b0dc;font-size:1.05rem}
+/* tarjetas */
+.gal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:1.8rem;padding-bottom:2rem}
+.vcard{position:relative;border-radius:24px;padding:1.5px;background:conic-gradient(from var(--a,0deg),#6d28d9,#38bdf8,#e879f9,#6d28d9);animation:spin 8s linear infinite;box-shadow:0 20px 50px rgba(0,0,0,.5),0 0 40px rgba(109,40,217,.25);transition:transform .35s,box-shadow .35s}
+@property --a{syntax:'<angle>';initial-value:0deg;inherits:false}
+@keyframes spin{to{--a:360deg}}
+.vcard:hover{transform:translateY(-6px);box-shadow:0 26px 60px rgba(0,0,0,.55),0 0 56px rgba(167,139,250,.45)}
+.vcard.playing{box-shadow:0 26px 60px rgba(0,0,0,.55),0 0 64px rgba(56,189,248,.5)}
+.vcard>*{position:relative}
+.vframe{border-radius:22px 22px 0 0;overflow:hidden;background:#000;background-clip:padding-box}
+.vframe video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#000}
+.vinfo{padding:1.2rem 1.3rem 1.4rem;background:#14102e;border-radius:0 0 22px 22px}
+.vinfo h2{color:#fff;font-size:1.15rem;margin:.5rem 0 .35rem}
+.vinfo p{color:#b9b0dc;font-size:.92rem;margin:0 0 1rem}
+.tag{display:inline-block;padding:.2rem .7rem;border-radius:99px;background:rgba(167,139,250,.18);border:1px solid rgba(167,139,250,.45);color:#d9ccff;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.vinfo .btn{padding:.6rem 1.2rem;font-size:.9rem}
+.gal-cta{text-align:center;padding:1rem 20px 3.5rem}
+.gal-ftr{padding:1.4rem 0;border-top:1px solid rgba(167,139,250,.18);background:rgba(10,7,23,.7);text-align:center;color:#9d94c4;font-size:.85rem}
+.gal-ftr a{color:#c4b5fd;text-decoration:underline}
+@media(max-width:640px){.gal-hero{padding-top:2.2rem}.gal-back span{display:none}.vcard{border-radius:20px}.vframe{border-radius:18px 18px 0 0}.vinfo{border-radius:0 0 18px 18px}}
+@media(prefers-reduced-motion:reduce){.bg *,.vcard{animation:none!important}}

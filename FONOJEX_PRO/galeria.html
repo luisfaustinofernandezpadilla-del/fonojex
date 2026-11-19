@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Galería de videos | FonoJex Pro</title>
+<meta name="description" content="Galería de videos de FonoJex Pro: mira las promociones y los celulares Samsung, Redmi y más. Imperial - Cañete.">
+<meta name="theme-color" content="#0e0a1d">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/galeria.css">
+</head>
+<body class="gal">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-play" viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></symbol>
+<symbol id="i-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-wa" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8c-.8-.4-1.6-1.2-2-2l.8-1-1-2z"/></symbol>
+</svg>
+
+<header class="hdr"><div class="wrap hdr-in">
+<a class="brand" href="index.html"><img src="img/logo.webp" alt="" width="44" height="44"><span>Fono<b>Jex</b> Pro</span></a>
+<a href="index.html#promos" class="gal-back"><svg class="i" aria-hidden="true"><use href="#i-right"/></svg><span>Volver a la tienda</span></a>
+</div></header>
+
+<div class="bg" aria-hidden="true"><i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i><i class="grid"></i><i class="beam b1"></i><i class="beam b2"></i></div>
+
+<main class="gal-main">
+<section class="gal-hero wrap">
+<span class="eyebrow lt">Galería</span>
+<h1>Galería de <em>videos</em></h1>
+<p>Mira nuestras promos y los equipos que tenemos para ti. Toca un video para verlo y escríbenos por WhatsApp si te gusta alguno.</p>
+</section>
+
+<section class="wrap gal-grid" aria-label="Videos">
+<article class="vcard">
+<div class="vframe"><video class="gv" controls playsinline preload="none" width="1280" height="720" poster="img/promo-poster.webp" aria-label="Video promocional: Redmi A7 Pro con hasta 35% de descuento y mica de regalo"><source src="video/promo.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video></div>
+<div class="vinfo"><span class="tag">Promo</span><h2>Redmi A7 Pro · hasta 35% de descuento</h2><p>Mica de regalo incluida. Mira la promo y escríbenos por WhatsApp.</p>
+<a href="#" class="btn btn-p wa" data-msg="Hola FonoJex Pro, vi el video del Redmi A7 Pro y quiero mi descuento."><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg>Lo quiero</a></div>
+</article>
+<article class="vcard">
+<div class="vframe"><video class="gv" controls playsinline preload="none" width="1280" height="720" poster="img/promo2-poster.webp" aria-label="Video: Samsung Galaxy A07, potencia y fluidez en FonoJex Pro"><source src="video/promo-a07.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video></div>
+<div class="vinfo"><span class="tag">Samsung</span><h2>Samsung Galaxy A07 · más fluidez, más rendimiento</h2><p>Conoce el Galaxy A07 y pregunta por su precio y disponibilidad.</p>
+<a href="#" class="btn btn-p wa" data-msg="Hola FonoJex Pro, vi el video del Samsung Galaxy A07 y quiero información."><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg>Lo quiero</a></div>
+</article>
+<article class="vcard">
+<div class="vframe"><video class="gv" controls playsinline preload="none" width="1280" height="720" poster="img/promo3-poster.webp" aria-label="Video: Motorola Moto G17, cámara dual con IA, pantalla 6.7 HD+ y batería de 5000 mAh"><source src="video/promo-3.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video></div>
+<div class="vinfo"><span class="tag">Motorola</span><h2>Motorola Moto G17 · mejores fotos, más detalles</h2><p>Cámara dual con IA, pantalla de 6.7" HD+ y batería de 5000 mAh.</p>
+<a href="#" class="btn btn-p wa" data-msg="Hola FonoJex Pro, vi el video del Motorola Moto G17 y quiero información."><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg>Lo quiero</a></div>
+</article>
+<!-- Para agregar otro video: copia un <article class="vcard"> completo, cambia poster, source, título y mensaje. -->
+</section>
+
+<section class="wrap gal-cta"><a href="index.html#equipos" class="btn btn-w btn-lg">Ver todos los celulares<svg class="i" aria-hidden="true"><use href="#i-right"/></svg></a></section>
+</main>
+
+<footer class="gal-ftr"><div class="wrap">© <span id="year">2026</span> FonoJex Pro · Imperial - Cañete · <a href="index.html">Volver al inicio</a></div></footer>
+<script src="js/galeria.js"></script>
+</body>
+</html>
